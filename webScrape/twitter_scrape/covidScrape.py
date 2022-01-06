@@ -5,7 +5,7 @@ import requests
 import csv
 from bs4 import BeautifulSoup
 
-
+# https://medium.com/analytics-vidhya/how-to-scrape-a-table-from-website-using-python-ce90d0cfb607
 
 url = 'https://www.worldometers.info/coronavirus/'
 page = requests.get(url)
