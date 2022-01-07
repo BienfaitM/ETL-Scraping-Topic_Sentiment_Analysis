@@ -25,4 +25,10 @@ for j in table.find_all('tr')[1:]:
     row= [i.text for i in row_data]
     length = len(covid_df)
     covid_df.loc[length] = row
+
+# Drop and clearing unnecessary rows
+covid_df.drop(covid_df.index[0:7], inplace=True)
+covid_df.drop(covid_df.index[222:229], inplace=True)
+covid_df.reset_index(inplace=True, drop=True)
+
 covid_df.to_csv('covid_df.csv')
