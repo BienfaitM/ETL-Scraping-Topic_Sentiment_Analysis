@@ -22,12 +22,15 @@ class Scrape_twitter:
         query2 = "coronavirus"
         query3 = "covid"
         query4 = "covid19"
+        query5 = "lockdown"
+        query6 = "Covid_19"
+        query7 = 'omicron'
 
         # get tweets from the API
         tweets = tweepy.Cursor(self.get_access().search_tweets,
                 geocode="-31.3096000,18.3570000,500km", 
                 # q = [print(x) for x in queries],
-                q = query1 or query2 or query3 or query4,
+                q = query1 or query2 or query3 or query4 or query5 or query6 or query7,
                 lang='en',
                 since = "2020-09-16").items(500)
         tweets_copy = []
